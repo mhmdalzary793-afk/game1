@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>المباراة الأولى</title>
+<style>
+body {
+  background: #1e1e1e;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+}
+#rabbit {
+  width: 80px;
+  height: 80px;
+  background: pink;
+  border-radius: 50%;
+  position: absolute;
+  top: 200px;
+  left: 150px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<h1>🐰 المباراة الأولى</h1>
+<p>اضغط على الأرنب واجمع نقاط</p>
+
+<div id="rabbit"></div>
+<h2 id="score">النقاط: 0</h2>
+
+<script>
+let score = 0;
+const rabbit = document.getElementById("rabbit");
+const scoreText = document.getElementById("score");
+
+rabbit.onclick = () => {
+  score++;
+  scoreText.innerText = "النقاط: " + score;
+  rabbit.style.left = Math.random() * 300 + "px";
+  rabbit.style.top = Math.random() * 300 + "px";
+};
+</script>
+
+</body>
+</html>
